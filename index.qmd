@@ -117,7 +117,7 @@ The tested **local models were unsuccessful across the board. The score for each
 
 We only tested models that met two criteria: (a) could run on a laptop at a reasonable speed, and (b) worked with OpenRouter. We used OpenRouter to test all models to ensure a level playing field.
 
-There are local models that are too big to be run on a laptop, but could be run on a dedicated server. These models likely perform better than the smaller ones. 
+There are local models that are too big to be run on even high-end laptops, but could be run on a dedicated server. These models likely perform better than the smaller ones. 
 
 We did test one such model, [Qwen3 Coder 30B](https://github.com/QwenLM/Qwen3-Coder), and it performed surprisingly well (70% success rate). However, it is too large to run on even a high-end laptop unless aggressively quantized, which ruins performance, so we excluded it from our analysis. 
 
