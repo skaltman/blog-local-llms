@@ -4,6 +4,7 @@ subtitle: "LLMs that can run on your laptop are not yet capable enough to drive 
 author: "Simon Couch, Sara Altman"
 execute:
   echo: false
+format: gfm
 ---
 
 ```{r}
