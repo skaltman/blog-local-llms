@@ -98,7 +98,7 @@ helper_results |>
   )
 ```
 
-To assess how suited various models are for coding agents, we considered a **table stakes capability for a coding agent: code refactoring.** Generally, to refactor code, a coding agent needs to:
+To assess how well various models work for coding agents, we considered a **table stakes capability for a coding agent: code refactoring.** Generally, to refactor code, a coding agent needs to:
 
 1. Find the file in the project where the original code lives using a text search tool.
 2. Read the file that it discovers.
@@ -109,7 +109,7 @@ This is a common task that a coding agent should almost always execute perfectly
 
 We used **[helperbench](https://github.com/simonpcouch/helperbench)**, an evaluation that tests how well agents can carry out a simple refactor. To be scored as correct, the agent needs to correctly refactor a bit of code into a helper function. The evaluation was run ten times for each model. 
 
-**Locals models were unsuccessful across the board. The score for each local model is 0%, meaning that they never successfully refactored the code.** The frontier models and the budget model Claude Haiku 4.5, however, were reliably able to refactor the code.^[_Frontier_ models include models from the major AI labs that we would use for a daily driver coding assistant. The _budget_ models are a step down from the frontier models, typically less reliable but also cheaper. The _local_ models are models that you can run on a laptop.] Two Anthropic models, Claude Sonnet 4.5 and Claude Haiku 4.5, had perfect scores, successfully refactoring the code ten out of ten times.
+**Local models were unsuccessful across the board. The score for each local model is 0%, meaning that they never successfully refactored the code.** The frontier models and the budget model Claude Haiku 4.5, however, were reliably able to refactor the code.^[_Frontier_ models include models from the major AI labs that we would use for a daily driver coding assistant. The _budget_ models are a step down from the frontier models, typically less reliable but also cheaper. The _local_ models are models that you can run on a laptop.] Two Anthropic models, Claude Sonnet 4.5 and Claude Haiku 4.5, had perfect scores, successfully refactoring the code ten out of ten times.
 
 :::callout-note
 # What about other local models?
@@ -128,7 +128,7 @@ For more details on model choice, see Simon's [post](https://www.simonpcouch.com
 
 The **local models never successfully refactored the code**, while the frontier and budget models ranged from moderately to highly successful. 
 
-This is just one evaluation, but code refactoring is a core skill of coding agents, and this was a relatively simple task. We would want local models to at least be able to refactor the code some of the time before trusting them in a coding agent like Positron Assistant or Databot. 
+This is just one evaluation, but code refactoring is a core skill of coding agents, and this was a relatively simple task. We would need local models to successfully refactor at least some of the time before trusting them in a coding agent like Positron Assistant or Databot. 
 
 Each local model has its own way it tends to fail:
 
@@ -210,16 +210,6 @@ Note that this is the price _per refactor_ task, not per token. Different models
 ## Inspect the logs
 
 You can explore the logs from each of these runs in more detail in the log viewer below. The logs show the full conversation between the agent and the tools, including all tool calls, errors, and the agent's reasoning process. This lets you see exactly where and how each model succeeded or failed. 
-
-```{r bundle}
-#| include: false
-#| eval: false
-vitals::vitals_bundle(
-  "2025-12-04-local-agents/logs",
-  "assets/2025-12-04-local-agents/logs",
-  overwrite = TRUE
-)
-```
 
 ```{r viewer}
 #| echo: false
