@@ -150,9 +150,9 @@ cost_summary <- helper_results |>
   mutate(
     correct = score == "C",
     color = case_when(
-      type == "Frontier" ~ "#9a6caeff",
+      type == "Frontier" ~ "#be8bd4ff",
       type == "Budget" ~ "#f6e8c3",
-      type == "Local" ~ "#58bccbff"
+      type == "Local" ~ "#80c8d3ff"
     )
   ) |>
   group_by(model, type, color) |>
@@ -176,9 +176,9 @@ cost_summary |>
   scale_fill_identity() +
   scale_color_manual(
     values = c(
-      "Frontier" = "#9a6caeff",
+      "Frontier" = "#be8bd4ff",
       "Budget" = "#f6e8c3",
-      "Local" = "#58bccbff"
+      "Local" = "#80c8d3ff"
     )
   ) +
   scale_x_continuous(
