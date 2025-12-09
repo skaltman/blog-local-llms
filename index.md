@@ -10,8 +10,9 @@ be used with local models.
 The answer is technically yes, but **we don’t recommend it.** You can
 connect to local models from Positron Assistant and Databot through an
 OpenAI API-compatible endpoint, and you can use `side::kick()` with any
-model that connects through `ellmer::chat()`. However, **local models
-are not capable enough to be useful in these tools right now.**
+model that connects through `ellmer::chat()`. However, local models–at
+least the ones that can reasonably run on your laptop–**are not capable
+enough to be useful in these tools right now.**
 
 We understand why local models are appealing. They address two major
 concerns with using LLMs: cost and privacy. Coding agents that use paid,
@@ -21,9 +22,10 @@ laptop sounds ideal. With a non-local model, you need to [trust your
 model provider](https://posit.co/blog/trust-llm-tools/) with your data.
 
 The problem is that the current local models simply aren’t capable
-enough yet. In this post, we’ll show results from an evaluation that
-tests how well different models can perform a basic code refactoring
-task, a fundamental capability for any coding agent.
+enough yet. **For this post, we focus on models that are small enough to
+run on a laptop at a reasonable speed.** We’ll show results from an
+evaluation that tests how well different models can perform a basic code
+refactoring task, a fundamental capability for any coding agent.
 
 ## How well can agents refactor code?
 
@@ -51,34 +53,34 @@ To be scored as correct, the agent needs to correctly refactor a bit of
 code into a helper function. The evaluation was run ten times for each
 model.
 
-**Local models were unsuccessful across the board. The score for each
-local model is 0%, meaning that they never successfully refactored the
-code.** The frontier models and the budget model Claude Haiku 4.5,
-however, were reliably able to refactor the code.[^1] Two Anthropic
-models, Claude Sonnet 4.5 and Claude Haiku 4.5, had perfect scores,
-successfully refactoring the code ten out of ten times.
+The tested **local models were unsuccessful across the board. The score
+for each local model is 0%, meaning that they never successfully
+refactored the code.** The frontier models and the budget model Claude
+Haiku 4.5, however, were reliably able to refactor the code.[^1] Two
+Anthropic models, Claude Sonnet 4.5 and Claude Haiku 4.5, had perfect
+scores, successfully refactoring the code ten out of ten times.
 
 > [!NOTE]
 >
-> ### What about other local models?
+> ### What about larger local models?
 >
 > We only tested models that met two criteria: (a) could run on a laptop
 > at a reasonable speed, and (b) worked with OpenRouter. We used
 > OpenRouter to test all models to ensure a level playing field.
 >
-> Local models not included:
+> There are local models that are too big to be run on a laptop, but
+> could be run on a dedicated server. These models likely perform better
+> than the smaller ones.
 >
-> - **Qwen 3 Coder 30B** performed surprisingly well (70% success rate)
->   but is too large to run on an M4 MacBook Pro with 48GB memory unless
->   aggressively quantized, which ruins performance. While it
->   technically worked, it doesn’t meet our first criterion of running
->   on a laptop.
-> - **Gemma 3 27B** wasn’t tested because OpenRouter doesn’t support
->   tool calling with that model.
+> We did test one such model, [Qwen3 Coder
+> 30B](https://github.com/QwenLM/Qwen3-Coder), and it performed
+> surprisingly well (70% success rate). However, it is too large to run
+> on even a high-end laptop unless aggressively quantized, which ruins
+> performance, so we excluded it from our analysis.
 >
 > For more details on model choice, see Simon’s
 > [post](https://www.simonpcouch.com/blog/2025-12-04-local-agents/) on
-> his personal blog, which goes into more detail.
+> his personal blog.
 
 ## How local models fail
 
@@ -204,14 +206,17 @@ You can see more details about the evaluation implementation
 ## Conclusion
 
 Local models are compelling. They’re free to run and can keep your data
-entirely private. However, they just aren’t as capable as the current
-best paid models.
+entirely private. However, the models that are small enough to run on a
+laptop just aren’t as capable as the current best paid models.
 
-The good news is that the field is advancing rapidly. Local models may
-at some point catch up to or surpass today’s frontier models. Until
-then, if you want to effectively use coding agents, we recommend using
-the most capable model you can, which today is probably going to be
-Claude Sonnet 4.5, Claude Opus 4.5, or OpenAI GPT-5.
+The good news is that the field is advancing rapidly. There are larger
+open-weights models that could be run on more powerful hardware (like
+dedicated GPU servers) which are likely to perform substantially better
+than the laptop-sized models tested here. Local models may at some point
+catch up to or surpass today’s frontier models. Until then, if you want
+to effectively use coding agents, we recommend using the most capable
+model you can, which today is probably going to be Claude Sonnet 4.5,
+Claude Opus 4.5, or OpenAI GPT-5.
 
 If data privacy is a concern, know that the major model providers can
 provide zero data retention agreements and other arrangements, allowing
