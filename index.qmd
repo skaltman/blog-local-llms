@@ -34,7 +34,7 @@ One of the most commonly asked questions we get about coding agents like [Positr
 
 The answer is technically yes, but **we don't recommend it.** You can connect to local models from Positron Assistant and Databot through an OpenAI API-compatible endpoint, and you can use `side::kick()` with any model that connects through `ellmer::chat()`. However, **local models are not capable enough to be useful in these tools right now.**
 
-We understand why local models are appealing. They address two major concerns with using LLMs: cost and privacy. Coding agents that use paid, remote models can easily cost $100 per week. And if you work with protected or confidential data, running a model entirely on your laptop sounds ideal. With a non-local model, you need to [trust your model provider](https://posit.co/blog/trust-llm-tools/) with your data.
+We understand why local models are appealing. They address two major concerns with using LLMs: cost and privacy. Coding agents that use paid, remotely hosted models can easily cost $100 per week. And if you work with protected or confidential data, running a model entirely on your laptop sounds ideal. With a non-local model, you need to [trust your model provider](https://posit.co/blog/trust-llm-tools/) with your data.
 
 The problem is that the current local models simply aren't capable enough yet. In this post, we'll show results from an evaluation that tests how well different models can perform a basic code refactoring task, a fundamental capability for any coding agent. 
 
@@ -150,9 +150,9 @@ cost_summary <- helper_results |>
   mutate(
     correct = score == "C",
     color = case_when(
-      type == "Frontier" ~ "#6caea7",
+      type == "Frontier" ~ "#be8bd4ff",
       type == "Budget" ~ "#f6e8c3",
-      type == "Local" ~ "#ef8a62"
+      type == "Local" ~ "#80c8d3ff"
     )
   ) |>
   group_by(model, type, color) |>
@@ -176,9 +176,9 @@ cost_summary |>
   scale_fill_identity() +
   scale_color_manual(
     values = c(
-      "Frontier" = "#6caea7",
+      "Frontier" = "#be8bd4ff",
       "Budget" = "#f6e8c3",
-      "Local" = "#ef8a62"
+      "Local" = "#80c8d3ff"
     )
   ) +
   scale_x_continuous(

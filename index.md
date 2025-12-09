@@ -15,10 +15,10 @@ are not capable enough to be useful in these tools right now.**
 
 We understand why local models are appealing. They address two major
 concerns with using LLMs: cost and privacy. Coding agents that use paid,
-remote models can easily cost \$100 per week. And if you work with
-protected or confidential data, running a model entirely on your laptop
-sounds ideal. With a non-local model, you need to [trust your model
-provider](https://posit.co/blog/trust-llm-tools/) with your data.
+remotely hosted models can easily cost \$100 per week. And if you work
+with protected or confidential data, running a model entirely on your
+laptop sounds ideal. With a non-local model, you need to [trust your
+model provider](https://posit.co/blog/trust-llm-tools/) with your data.
 
 The problem is that the current local models simply aren’t capable
 enough yet. In this post, we’ll show results from an evaluation that
