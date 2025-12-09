@@ -1,0 +1,173 @@
+{
+  "2025-11-26T11-46-36-06-00_helperbench_bb648cf67f64feecacdc28.json": {
+    "eval_id": {},
+    "run_id": "CmFnN8FpPBD73OAwlCIFqB",
+    "task": "helperbench",
+    "task_id": "bb648cf67f64feecacdc28",
+    "task_version": 0,
+    "version": 2,
+    "status": "success",
+    "model": "helper_solver (google/gemini-2.5-flash)",
+    "started_at": "2025-11-26T11:46:36-06:00",
+    "completed_at": "2025-11-26T11:46:36-06:00",
+    "primary_metric": {
+      "name": "accuracy",
+      "value": 40,
+      "params": {
+        "1": "numeric_scores"
+      }
+    }
+  },
+  "2025-11-26T11-47-56-06-00_helperbench_bb648cf67f64feecacdc28.json": {
+    "eval_id": {},
+    "run_id": "oPDULuELTk0oqazsDbay7y",
+    "task": "helperbench",
+    "task_id": "bb648cf67f64feecacdc28",
+    "task_version": 0,
+    "version": 2,
+    "status": "success",
+    "model": "helper_solver (anthropic/claude-haiku-4.5)",
+    "started_at": "2025-11-26T11:47:56-06:00",
+    "completed_at": "2025-11-26T11:47:56-06:00",
+    "primary_metric": {
+      "name": "accuracy",
+      "value": 100,
+      "params": {
+        "1": "numeric_scores"
+      }
+    }
+  },
+  "2025-11-26T11-48-28-06-00_helperbench_bb648cf67f64feecacdc28.json": {
+    "eval_id": {},
+    "run_id": "eTwozCE5xNPmBviKsg5dS5",
+    "task": "helperbench",
+    "task_id": "bb648cf67f64feecacdc28",
+    "task_version": 0,
+    "version": 2,
+    "status": "success",
+    "model": "helper_solver (openai/gpt-4.1-mini)",
+    "started_at": "2025-11-26T11:48:28-06:00",
+    "completed_at": "2025-11-26T11:48:28-06:00",
+    "primary_metric": {
+      "name": "accuracy",
+      "value": 30,
+      "params": {
+        "1": "numeric_scores"
+      }
+    }
+  },
+  "2025-11-26T11-49-37-06-00_helperbench_bb648cf67f64feecacdc28.json": {
+    "eval_id": {},
+    "run_id": "HTzODqACXEl7XCvrniTnsd",
+    "task": "helperbench",
+    "task_id": "bb648cf67f64feecacdc28",
+    "task_version": 0,
+    "version": 2,
+    "status": "success",
+    "model": "helper_solver (mistralai/mistral-small-3.1-24b-instruct)",
+    "started_at": "2025-11-26T11:49:37-06:00",
+    "completed_at": "2025-11-26T11:49:37-06:00",
+    "primary_metric": {
+      "name": "accuracy",
+      "value": 0,
+      "params": {
+        "1": "numeric_scores"
+      }
+    }
+  },
+  "2025-11-26T12-00-53-06-00_helperbench_bb648cf67f64feecacdc28.json": {
+    "eval_id": {},
+    "run_id": "Wle8WjAi2sYFHJ2wqI4Hg1",
+    "task": "helperbench",
+    "task_id": "bb648cf67f64feecacdc28",
+    "task_version": 0,
+    "version": 2,
+    "status": "success",
+    "model": "helper_solver (google/gemini-2.5-pro)",
+    "started_at": "2025-11-26T12:00:53-06:00",
+    "completed_at": "2025-11-26T12:00:53-06:00",
+    "primary_metric": {
+      "name": "accuracy",
+      "value": 90,
+      "params": {
+        "1": "numeric_scores"
+      }
+    }
+  },
+  "2025-11-26T12-06-24-06-00_helperbench_bb648cf67f64feecacdc28.json": {
+    "eval_id": {},
+    "run_id": "Sln5QgcLZ0djU8SzFqpfP0",
+    "task": "helperbench",
+    "task_id": "bb648cf67f64feecacdc28",
+    "task_version": 0,
+    "version": 2,
+    "status": "success",
+    "model": "helper_solver (openai/gpt-4.1)",
+    "started_at": "2025-11-26T12:06:24-06:00",
+    "completed_at": "2025-11-26T12:06:24-06:00",
+    "primary_metric": {
+      "name": "accuracy",
+      "value": 80,
+      "params": {
+        "1": "numeric_scores"
+      }
+    }
+  },
+  "2025-11-26T12-12-24-06-00_helperbench_bb648cf67f64feecacdc28.json": {
+    "eval_id": {},
+    "run_id": "FntQjITzw0nKD1WQTAdN3r",
+    "task": "helperbench",
+    "task_id": "bb648cf67f64feecacdc28",
+    "task_version": 0,
+    "version": 2,
+    "status": "success",
+    "model": "helper_solver (anthropic/claude-sonnet-4.5)",
+    "started_at": "2025-11-26T12:12:24-06:00",
+    "completed_at": "2025-11-26T12:12:24-06:00",
+    "primary_metric": {
+      "name": "accuracy",
+      "value": 100,
+      "params": {
+        "1": "numeric_scores"
+      }
+    }
+  },
+  "2025-12-03T13-00-34-06-00_helperbench_bb648cf67f64feecacdc28.json": {
+    "eval_id": {},
+    "run_id": "VAY04gnrg0VBZOvUOj7JvL",
+    "task": "helperbench",
+    "task_id": "bb648cf67f64feecacdc28",
+    "task_version": 0,
+    "version": 2,
+    "status": "success",
+    "model": "helper_solver (qwen/qwen3-14b)",
+    "started_at": "2025-12-03T13:00:34-06:00",
+    "completed_at": "2025-12-03T13:00:34-06:00",
+    "primary_metric": {
+      "name": "accuracy",
+      "value": 0,
+      "params": {
+        "1": "numeric_scores"
+      }
+    }
+  },
+  "2025-12-03T13-46-35-06-00_helperbench_bb648cf67f64feecacdc28.json": {
+    "eval_id": {},
+    "run_id": "zhrVcVkY3wqTVjQzAS7ydD",
+    "task": "helperbench",
+    "task_id": "bb648cf67f64feecacdc28",
+    "task_version": 0,
+    "version": 2,
+    "status": "success",
+    "model": "helper_solver (openai/gpt-oss-20b)",
+    "started_at": "2025-12-03T13:46:35-06:00",
+    "completed_at": "2025-12-03T13:46:35-06:00",
+    "primary_metric": {
+      "name": "accuracy",
+      "value": 0,
+      "params": {
+        "1": "numeric_scores"
+      }
+    }
+  }
+}
