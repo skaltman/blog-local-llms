@@ -209,17 +209,13 @@ Note that this is the price _per refactor_ task, not per token. Different models
 
 ## Inspect the logs
 
-You can explore the logs from each of these runs in more detail in the log viewer below. The logs show the full conversation between the agent and the tools, including all tool calls, errors, and the agent's reasoning process. This lets you see exactly where and how each model succeeded or failed. 
+You can explore the logs from each of these runs in more detail [here](https://www.simonpcouch.com/assets/2025-12-04-local-agents/logs/index.html#/logs). The logs show the full conversation between the agent and the tools, including all tool calls, errors, and the agent's reasoning process. This lets you see exactly where and how each model succeeded or failed. For example, here's a screenshot of the log summary for Mistral 3.1 24B:
 
-```{r viewer}
-#| echo: false
-htmltools::tags$iframe(
-  src = "/assets/2025-12-04-local-agents/logs/index.html#/logs",
-  width = "100%",
-  height = "600px",
-  style = "border-radius: 10px; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);"
-)
-```
+::: {style="border-radius:12px 12px 10px 10px; overflow:hidden; box-shadow:0 12px 30px rgba(0,0,0,0.22); display:inline-block;"}
+
+[![Screenshot of the log summary for Mistral 3.1 24B](images/logs.png)](https://www.simonpcouch.com/assets/2025-12-04-local-agents/logs/index.html#/logs/2025-11-26T11-49-37-06-00_helperbench_bb648cf67f64feecacdc28.json)
+
+:::
 
 
 ## Evaluation details
