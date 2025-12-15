@@ -23,9 +23,10 @@ model provider](https://posit.co/blog/trust-llm-tools/) with your data.
 
 The problem is that the current local models simply aren’t capable
 enough yet. **For this post, we focus on models that are small enough to
-run on a laptop at a reasonable speed.** We’ll show results from an
-evaluation that tests how well different models can perform a basic code
-refactoring task, a fundamental capability for any coding agent.
+run on a high-end laptop at a reasonable speed.** We’ll show results
+from an evaluation that tests how well different models can perform a
+basic code refactoring task, a fundamental capability for any coding
+agent.
 
 ## How well can agents refactor code?
 
@@ -68,9 +69,9 @@ scores, successfully refactoring the code ten out of ten times.
 > at a reasonable speed, and (b) worked with OpenRouter. We used
 > OpenRouter to test all models to ensure a level playing field.
 >
-> There are local models that are too big to be run on a laptop, but
-> could be run on a dedicated server. These models likely perform better
-> than the smaller ones.
+> There are local models that are too big to be run on even high-end
+> laptops, but could be run on a dedicated server. These models likely
+> perform better than the smaller ones.
 >
 > We did test one such model, [Qwen3 Coder
 > 30B](https://github.com/QwenLM/Qwen3-Coder), and it performed
@@ -123,13 +124,18 @@ using up tokens in their attempts to resolve tool errors.
 
 ## Inspect the logs
 
-You can explore the logs from each of these runs in more detail in the
-log viewer below. The logs show the full conversation between the agent
-and the tools, including all tool calls, errors, and the agent’s
-reasoning process. This lets you see exactly where and how each model
-succeeded or failed.
+You can explore the logs from each of these runs in more detail
+[here](https://www.simonpcouch.com/assets/2025-12-04-local-agents/logs/index.html#/logs).
+The logs show the full conversation between the agent and the tools,
+including all tool calls, errors, and the agent’s reasoning process.
+This lets you see exactly where and how each model succeeded or failed.
+For example, here’s a screenshot of the log summary for Mistral 3.1 24B:
 
-<iframe src="/assets/2025-12-04-local-agents/logs/index.html#/logs" width="100%" height="600px" style="border-radius: 10px; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);"></iframe>
+<div style="border-radius:12px 12px 10px 10px; overflow:hidden; box-shadow:0 12px 30px rgba(0,0,0,0.22); display:inline-block;">
+
+[![](images/logs.png)](https://www.simonpcouch.com/assets/2025-12-04-local-agents/logs/index.html#/logs/2025-11-26T11-49-37-06-00_helperbench_bb648cf67f64feecacdc28.json)
+
+</div>
 
 ## Evaluation details
 
